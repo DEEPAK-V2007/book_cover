@@ -1,5 +1,5 @@
 # Ex.06 Book Front Cover Page Design
-# Date:
+# Date:05-10-25
 # AIM:
 To design a book front cover page using HTML and CSS.
 
@@ -29,6 +29,66 @@ Insert the images in their appropriate places.
 Publish the website in the LocalHost.
 
 # PROGRAM:
+```
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookCover</title>
+    <style>
+        body{
+            display: flex;
+            margin: 0;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .BookCover{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background: url('{% static "wing.jpg" %}') center/cover no-repeat;
+            color: white;
+            height: 600px;
+            width: 360px;
+            padding: 90px;
+            font-size: x-large;
+        }
+        h1{
+            margin-bottom: 150px;
+            text-transform: uppercase;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        img{
+            border-radius: 50%;
+            border: 10px,solid white;
+            margin-top: 130px;
+            margin-left: 300px;
+        }
+        h6{
+            margin-left: 180px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="BookCover">
+        <h1><b><u>Wings of Fire</u></b></h1>
+        <img src="{% static 'APJ.jpg' %}">
+        <h6>- an autobiography of Dr A.P.J.Abdul Kalam</h6>
+    </div>
+</body>
+</html>
+```
 # OUTPUT:
+
+![alt text](<EX6 output.png>)
+
 # RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
